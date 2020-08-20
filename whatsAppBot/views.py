@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
 def smsView(request, *args, **kwargs):
-    msg = request.GET.get('body')
+    msg = request.POST.get('body')
     resp = MessagingResponse()
     resp.message("You said: {}".format(msg))
     return HttpResponse(resp.to_xml(), content_type='text/xml')
