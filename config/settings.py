@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-APPEND_SLASH=False
+TWILIO_ACCOUNT_SID = 'ACb6f793f6b77ee085c7f73a612de50d20'
+TWILIO_AUTH_TOKEN = '6e466b4187de41b0d132cc377b659a5a'
 
 
 # Application definition
