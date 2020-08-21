@@ -10,7 +10,7 @@ def smsView(request):
         msg = "Bienvenido de Nuevo, intentado conectar..."
     else:
         msg = "Bienvenido, intentado conectar..."
-        Talker.objects.create(number)
+        Talker.objects.create(number = str(number))
     name = request.POST.get('Body', '')
     #msg = 'Hey %s, how are you today?' % (name)
     r = MessagingResponse()
