@@ -34,7 +34,7 @@ def smsView(request):
                     msg_media.body(msg)
                     # Imagen
                     nombreImagen = genImage(invitado.nombre, str(invitado.id))
-                    msg_media.media('http://' + request.get_host() + '/media/invitaciones/' + nombreImagen)
+                    msg_media.media('http://' + request.get_host() + '/static/invitaciones/' + nombreImagen)
                     r.nest(msg_media)
                     # msg_media = r.message(msg)
                     return r
@@ -73,7 +73,7 @@ def smsView(request):
                     msg_media.body(msg)
                     #Imagen
                     nombreImagen = genImage(invitado.nombre,str(invitado.id))
-                    msg_media.media('http://' + request.get_host() + '/media/invitaciones/' + nombreImagen)
+                    msg_media.media('http://' + request.get_host() + '/static/invitaciones/' + nombreImagen)
                     r.nest(msg_media)
                     #msg_media = r.message(msg)
                     return r

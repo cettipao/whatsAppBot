@@ -12,7 +12,7 @@ def genImage(nombre,id):
     logo = logo.resize((380, 380))
     logo = logo.crop((25, 25, 360, 360))
 
-    img = Image.open(BASE_DIR + '/media/' + "flyer.png")
+    img = Image.open(BASE_DIR + '/static/' + "flyer.png")
     # Escribe el Nombre
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("arial.ttf", 130)
@@ -36,7 +36,7 @@ def genImage(nombre,id):
     img.paste(logo, (370, 1075), logo)
 
     # guarda
-    f = open(BASE_DIR + '/media/invitaciones/' + str(id) +nombre + '.png', 'wb')
+    f = open(BASE_DIR + '/static/invitaciones/' + str(id) +nombre + '.png', 'wb')
 
     img.save(f)
     f.close()
@@ -44,7 +44,7 @@ def genImage(nombre,id):
     return "{}{}.png".format(str(id),nombre)
 
 def deleteImgs():
-    folder = BASE_DIR + '/media/invitaciones/'
+    folder = BASE_DIR + '/static/invitaciones/'
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)
         try:
