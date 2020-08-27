@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdeaaa3a-6f7c-46cd-9388-c660a3194aa5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsAppBot/imageGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/whatsAppBot/imageGenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsAppBot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/whatsAppBot/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2176">
-              <caret line="128" column="33" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="33" />
+            <state relative-caret-position="260">
+              <caret line="128" column="35" lean-forward="true" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -60,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imageGenerator.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="imageGenerator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/whatsAppBot/imageGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
@@ -116,13 +114,13 @@
         <option value="$USER_HOME$/.virtualenvs/whatsAppBot/lib/python3.6/site-packages/suit/widgets.py" />
         <option value="$USER_HOME$/.virtualenvs/whatsAppBot/lib/python3.6/site-packages/jet/models.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/urls.py" />
-        <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/admin.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/models.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/migrations/imageGenerator.py" />
         <option value="$PROJECT_DIR$/config/urls.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/imageGenerator.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/views.py" />
+        <option value="$PROJECT_DIR$/config/settings.py" />
       </list>
     </option>
   </component>
@@ -538,13 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="128" column="33" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/whatsAppBot/lib/python3.6/site-packages/twilio/twiml/messaging_response.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-261">
@@ -586,6 +577,13 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="128" column="35" lean-forward="true" selection-start-line="128" selection-start-column="35" selection-end-line="128" selection-end-column="35" />
         </state>
       </provider>
     </entry>
