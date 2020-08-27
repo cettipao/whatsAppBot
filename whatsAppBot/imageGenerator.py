@@ -14,7 +14,7 @@ def genImage(nombre,id):
     img = Image.open(BASE_DIR + '/static/' + "flyer.png")
     # Escribe el Nombre
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("arial.ttf", 130)
+    font = ImageFont.truetype(BASE_DIR + '/static/' + "arial.ttf", 130)
     texto = str(nombre)
 
     # Centrar texto vertical y horizontalmente.

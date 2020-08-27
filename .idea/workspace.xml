@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdeaaa3a-6f7c-46cd-9388-c660a3194aa5" name="Default" comment="" />
+    <list default="true" id="cdeaaa3a-6f7c-46cd-9388-c660a3194aa5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/whatsAppBot/arial.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsAppBot/imageGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/whatsAppBot/imageGenerator.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +62,8 @@
       <file leaf-file-name="imageGenerator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/whatsAppBot/imageGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+            <state relative-caret-position="106">
+              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -124,10 +127,10 @@
         <option value="$PROJECT_DIR$/whatsAppBot/admin.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/models.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/migrations/imageGenerator.py" />
-        <option value="$PROJECT_DIR$/whatsAppBot/imageGenerator.py" />
         <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/config/urls.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/views.py" />
+        <option value="$PROJECT_DIR$/whatsAppBot/imageGenerator.py" />
       </list>
     </option>
   </component>
@@ -593,8 +596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/whatsAppBot/imageGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        <state relative-caret-position="106">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
