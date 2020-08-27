@@ -6,7 +6,6 @@ import shutil
 
 from config.settings import BASE_DIR
 
-
 def genImage(nombre,id):
     logo = qrcode.make(id+nombre)
     logo = logo.resize((380, 380))
