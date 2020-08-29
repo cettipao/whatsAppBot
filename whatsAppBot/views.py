@@ -44,14 +44,16 @@ def smsView(request):
                     # msg_media = r.message(msg)
                     return r
                 if request.POST.get('Body') == "1":
-                    invitados = []
-                    for invitado in Invitado.objects.all():
-                        invitados.append(invitado.nombre)
-                    invitados.sort()
-                    invitados_str = '*Lista de invitados*\n'
-                    for i in range(len(invitados)):
-                        invitados_str += "{}. {}\n".format((i+1),invitados[i])
-                    msg = invitados_str + '\n(Ingrese cualquier cosa para ver acciones)'
+                    r = MessagingResponse()
+                    msg_media = Message()
+                    msg_media.body('(Ingrese cualquier cosa para ver acciones)')
+                    # Imagen
+                    nombreImagen = genImage(invitado.nombre, str(invitado.id))
+                    msg_media.media('http://' + request.get_host() + '/static/invitaciones/' + nombreImagen)
+                    r.nest(msg_media)
+                    # msg_media = r.message(msg)
+                    return r
+
                 elif request.POST.get('Body') == "2":
                     msg = "Por favor, ingrese su nombre a cambiar:"
                     invitado.cambio_nombre = True
@@ -59,29 +61,29 @@ def smsView(request):
                 elif request.POST.get('Body') == "3":
                     invitado.delete()
                     msg = "*Desconfirmacion Exitosa*\n\nVuelva a ingresar su nombre si desea volver a confirmar\n\n{}".format(mensajes.mensaje_final)
+                elif request.POST.get('Body').lower() == "invitados":
+                    invitados = []
+                    for invitado in Invitado.objects.all():
+                        invitados.append(invitado.nombre)
+                    invitados.sort()
+                    invitados_str = '*Lista de invitados*\n'
+                    for i in range(len(invitados)):
+                        invitados_str += "{}. {}\n".format((i + 1), invitados[i])
+                    msg = invitados_str + '\n(Ingrese cualquier cosa para ver acciones)'
                 else:
                     msg = "*Acciones Disponibles*\n(Ingrese el numero de accion a realizar) " \
-                          "\n \n1. Ver lista de invitados \n2. Cambiar nombre \n3. Desconfirmar asistencia " \
+                          "\n \n1. Pedir entrada \n2. Cambiar nombre \n3. Desconfirmar asistencia " \
                           "\n\n{}".format(mensajes.mensaje_final)
             else:
                 if request.POST.get('Body').lower() == "si" or request.POST.get('Body').lower() == "-si":
                     invitado.confirmado = True
                     invitado.save()
-                    msg = mensajes.confirmacion_exitosa + '\n(Ingrese cualquier cosa para ver acciones)'
-                    """
+                    msg = mensajes.confirmacion_exitosa
+
                     msg += "\n\n*Acciones Disponibles*\n(Ingrese el numero de accion a realizar) " \
                       "\n \n1. Ver lista de invitados \n2. Cambiar nombre \n3. Desconfirmar asistencia " \
                       "\n\n{}".format(mensajes.mensaje_final)
-                    """
-                    r = MessagingResponse()
-                    msg_media = Message()
-                    msg_media.body(msg)
-                    #Imagen
-                    nombreImagen = genImage(invitado.nombre,str(invitado.id))
-                    msg_media.media('http://' + request.get_host() + '/static/invitaciones/' + nombreImagen)
-                    r.nest(msg_media)
-                    #msg_media = r.message(msg)
-                    return r
+
                 elif request.POST.get('Body').lower() == "no" or request.POST.get('Body').lower() == "-no":
                     msg = mensajes.confirmacion_denegada
                     invitado.delete()
