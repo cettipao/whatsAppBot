@@ -1,6 +1,7 @@
-from django.urls import path,include
-from .views import smsView
+from django.urls import path
+from .views import smsView, homeView
 
 urlpatterns = [
+    path('',homeView),
     path('sms/', smsView),
 ]

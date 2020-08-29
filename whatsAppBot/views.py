@@ -5,7 +5,9 @@ from .models import Invitado, Mensajes
 from .imageGenerator import genImage, deleteImgs
 
 
-
+def homeView(request):
+    invitados = Invitado.objects.all()
+    return render(request, 'home.html', {'invitados':invitados})
 
 
 @twilio_view
@@ -14,6 +16,7 @@ def smsView(request):
         #deleteImgs()
         mensajes = Mensajes.objects.get(id = 1)
         num = request.POST.get('From')
+        num = num[9::]
         if len(Invitado.objects.all().filter(numero=num)) == 0:
             if request.POST.get('From') == None:
                 r = MessagingResponse()

@@ -1,0 +1,40 @@
+<nav>
+    <div class="nav-wrapper purple">
+        <a href="/" class="brand-logo right" style="padding-right: 3%;">Event Manager</a>
+        <a href="/" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+        <ul class="left hide-on-med-and-down">
+            <li><a href="">Add invitado</a></li>
+            <li><a href="">Remove Invitado</a></li>
+            <li><a href="">Acerca De</a></li>
+            <li><a href="">Desarrollo</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    $(document).ready(function () {
+        $('.sidenav').sidenav();
+    });
+</script>
+
+<ul id="slide-out" class="sidenav" style="background-color: white";>
+    <li>
+        <div class="user-view">
+            <div class="background">
+
+            </div>
+
+        </div>
+    </li>
+
+    <li><a href="" ><i class="material-icons"
+                style="font-size: 2.5rem;">clear_all</i>Add Invitado</a></li>
+    <li><a onclick="alert('Mas adelante')" ><i class="material-icons"
+                style="font-size: 2.5rem;">add_circle</i>Remove Invitado</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a class="subheader">Acerca de</a></li>
+    <li><a class="waves-effect">Desarrollo</a></li>
+</ul>
