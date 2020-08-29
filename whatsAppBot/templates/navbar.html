@@ -4,8 +4,8 @@
         <a href="/" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         <ul class="left hide-on-med-and-down">
-            <li><a href="">Add invitado</a></li>
-            <li><a href="">Remove Invitado</a></li>
+            <li><a href="">Ver Hombres</a></li>
+            <li><a href="">Ver Mujeres</a></li>
             <li><a href="">Acerca De</a></li>
             <li><a href="">Desarrollo</a></li>
         </ul>
@@ -18,7 +18,77 @@
     });
 </script>
 
-<ul id="slide-out" class="sidenav" style="background-color: white";>
+<!-- Modal Structure -->
+<div id="modalHombres" class="modal modal-fixed-footer" style="background-color: white;">
+    <div class="modal-content">
+        <h4>Hombres ({{ hombres }})</h4>
+        <table class="centered striped">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>WhatsApp</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for invitado in invitados %}
+                <tr>
+                    {% if invitado.sexo == "H" %}
+                        <td>{{ invitado.nombre }}</td>
+                        <td><a href="https://wa.me/{{ invitado.numero }}/"
+                               class="btn-floating btn-small waves-effect waves-light white"><i
+                                class="material-icons green-text">message</i></a></td>
+                        </td>
+                        </tr>
+                    {% endif %}
+            {% endfor %}
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class="modal-footer" style="background-color: white;">
+        <a class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="modalMujeres" class="modal modal-fixed-footer" style="background-color: white;">
+    <div class="modal-content">
+        <h4>Mujeres ({{ mujeres }})</h4>
+        <table class="centered striped">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>WhatsApp</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for invitado in invitados %}
+                <tr>
+                    {% if invitado.sexo == "M" %}
+                        <td>{{ invitado.nombre }}</td>
+                        <td><a href="https://wa.me/{{ invitado.numero }}/"
+                               class="btn-floating btn-small waves-effect waves-light white"><i
+                                class="material-icons green-text">message</i></a></td>
+                        </td>
+                        </tr>
+                    {% endif %}
+            {% endfor %}
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class="modal-footer" style="background-color: white;">
+        <a class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+</div>
+
+
+
+<ul id="slide-out" class="sidenav" style="background-color: white" ;>
     <li>
         <div class="user-view">
             <div class="background">
@@ -27,11 +97,17 @@
 
         </div>
     </li>
-
-    <li><a href="" ><i class="material-icons"
-                style="font-size: 2.5rem;">clear_all</i>Add Invitado</a></li>
-    <li><a onclick="alert('Mas adelante')" ><i class="material-icons"
-                style="font-size: 2.5rem;">add_circle</i>Remove Invitado</a></li>
+    <li><a href="#modalHombres" class="modal-trigger"><i class="material-icons"
+                      style="font-size: 2.5rem;">wc</i>Ver Hombres</a></li>
+    <li><a href="#modalMujeres" class="modal-trigger"><i class="material-icons"
+                      style="font-size: 2.5rem;">wc</i>Ver Mujeres</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a onclick="alert('No disponible')"><i class="material-icons"
+                      style="font-size: 2.5rem;">person_add</i>Add Invitado</a></li>
+    <li><a onclick="alert('No disponible')"><i class="material-icons"
+                                              style="font-size: 2.5rem;">person_outline</i>Remove Invitado</a></li>
     <li>
         <div class="divider"></div>
     </li>

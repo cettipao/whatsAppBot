@@ -1,45 +1,23 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Check Organizer
+    Event Manager
 {% endblock %}
 
 {% block content %}
     <!-- Page Layout here -->
     <div class="fixed-action-btn">
-        <a class="btn-floating btn-large purple" onclick="sumUp()">
-            <i class="large material-icons modal-trigger" data-target="modal1">check_box</i>
-        </a>
-    </div>
+  <a class="btn-floating btn-large purple">
+    <i class="large material-icons">more</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+  </ul>
+</div>
 
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal modal-fixed-footer" style="background-color: rgb(255, 251, 227);;">
-        <div class="modal-content">
-            <h4>Resumen</h4>
-            <p><b>Total Personas:</b><span id="totalPart"></span></p>
-            <p><b>Total Monto:</b><span id="totalMonto"></span></p>
-            <p><b>Total c/u:</b><span id="totalc/u"></span></p>
-
-
-            <table>
-                <thead>
-                <tr>
-                    <th>Apodo</th>
-                    <th>Pago</th>
-                    <th>Balance</th>
-                </tr>
-                </thead>
-
-                <tbody id="tabla">
-
-                </tbody>
-            </table>
-
-        </div>
-        <div class="modal-footer" style="background-color: rgb(255, 251, 227);;">
-            <a class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
-        </div>
-    </div>
 
     <div class="row">
 
@@ -71,11 +49,11 @@
 
                 <div class="divider"></div>
 
-                 <table>
+                 <table class="centered striped">
         <thead>
           <tr>
               <th>Nombre</th>
-              <th>Numero</th>
+              <th>WhatsApp</th>
               <th>Sexo</th>
           </tr>
         </thead>
@@ -84,8 +62,17 @@
             {% for invitado in invitados %}
           <tr>
             <td>{{ invitado.nombre }}</td>
-            <td>{{ invitado.numero }}</td>
-            <td>Sexo</td>
+            <td><a href="https://wa.me/{{ invitado.numero }}/" class="btn-floating btn-small waves-effect waves-light white"><i class="material-icons green-text">message</i></a></td>
+            <td> <div id="btnSexo">
+                {% if invitado.sexo == "H" %}
+                <a class="btn-floating btn-small waves-effect waves-light light-blue">H</a></td>
+                {% elif invitado.sexo == 'M' %}
+                <a class="btn-floating btn-small waves-effect waves-light pink accent-2">M</a></td>
+                {% else %}
+                <a class="btn-floating btn-small waves-effect waves-light white"></a></td>
+            {% endif %}
+            </div>
+            </td>
           </tr>
         {% endfor %}
 

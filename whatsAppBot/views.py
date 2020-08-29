@@ -7,7 +7,9 @@ from .imageGenerator import genImage, deleteImgs
 
 def homeView(request):
     invitados = Invitado.objects.all()
-    return render(request, 'home.html', {'invitados':invitados})
+    numHombres = len(Invitado.objects.filter(sexo="H"))
+    numMujeres = len(Invitado.objects.filter(sexo="M"))
+    return render(request, 'home.html', {'invitados':invitados,'hombres':numHombres,'mujeres':numMujeres})
 
 
 @twilio_view
