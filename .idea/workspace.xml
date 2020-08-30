@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdeaaa3a-6f7c-46cd-9388-c660a3194aa5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/whatsAppBot/excelGenerator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/funciones.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/funciones.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsAppBot/flyer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsAppBot/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/whatsAppBot/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsAppBot/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/whatsAppBot/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/InvitadosEvento.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/static/InvitadosEvento.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/whatsAppBot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/whatsAppBot/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/whatsAppBot/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            <state relative-caret-position="187">
+              <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -56,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="excelGenerator.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="excelGenerator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/whatsAppBot/excelGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state relative-caret-position="79">
+              <caret line="5" column="68" lean-forward="true" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -146,8 +141,8 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/whatsAppBot/urls.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/templates/home.html" />
-        <option value="$PROJECT_DIR$/whatsAppBot/views.py" />
         <option value="$PROJECT_DIR$/whatsAppBot/excelGenerator.py" />
+        <option value="$PROJECT_DIR$/whatsAppBot/views.py" />
       </list>
     </option>
   </component>
@@ -679,22 +674,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/whatsAppBot/views.py">
+    <entry file="file://$PROJECT_DIR$/whatsAppBot/excelGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="79">
+          <caret line="5" column="68" lean-forward="true" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/whatsAppBot/excelGenerator.py">
+    <entry file="file://$PROJECT_DIR$/whatsAppBot/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state relative-caret-position="187">
+          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
