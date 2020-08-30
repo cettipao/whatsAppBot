@@ -1,9 +1,24 @@
 from django.shortcuts import render
+from config.settings import BASE_DIR
 from django_twilio.decorators import twilio_view
 from twilio.twiml.messaging_response import MessagingResponse,Message
 from .models import Invitado, Mensajes
 from .imageGenerator import genImage, deleteImgs
+from .excelGenerator import genExcel
+import os
+from django.conf import settings
+from django.http import HttpResponse, Http404
 
+def downloadView(request):
+    invitados = Invitado.objects.all()
+    genExcel(invitados)
+    file_path = BASE_DIR + '/static/' + 'InvitadosEvento.xlsx'
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+            return response
+    raise Http404
 
 def homeView(request):
     invitados = Invitado.objects.all()
@@ -43,7 +58,7 @@ def smsView(request):
                     r.nest(msg_media)
                     # msg_media = r.message(msg)
                     return r
-                if request.POST.get('Body') == "1":
+                elif request.POST.get('Body') == "1":
                     r = MessagingResponse()
                     msg_media = Message()
                     msg_media.body('(Ingrese cualquier cosa para ver acciones)')
@@ -81,7 +96,7 @@ def smsView(request):
                     msg = mensajes.confirmacion_exitosa
 
                     msg += "\n\n*Acciones Disponibles*\n(Ingrese el numero de accion a realizar) " \
-                      "\n \n1. Ver lista de invitados \n2. Cambiar nombre \n3. Desconfirmar asistencia " \
+                      "\n \n1. Pedir entrada \n2. Cambiar nombre \n3. Desconfirmar asistencia " \
                       "\n\n{}".format(mensajes.mensaje_final)
 
                 elif request.POST.get('Body').lower() == "no" or request.POST.get('Body').lower() == "-no":
